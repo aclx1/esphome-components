@@ -36,6 +36,7 @@ namespace
         di.addLinkMode(LinkMode::C1);
         di.addDetection(MANUFACTURER_QDS, 0x04,  0x23);
         di.addDetection(MANUFACTURER_QDS, 0x04,  0x46);
+        di.addDetection(MANUFACTURER_QDS, 0x04,  0x48);
         di.addDetection(MANUFACTURER_QDS, 0x37,  0x23);
         di.usesProcessContent();
         di.setConstructor([](MeterInfo& mi, DriverInfo& di){ return shared_ptr<Meter>(new Driver(mi, di)); });
